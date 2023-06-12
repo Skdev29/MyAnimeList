@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+<title>MyAnimeList by Skdev</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'><link rel="stylesheet" href="/MAL_R/myanimelist.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" ng-app="formvalid">
+  <div class="panel" data-ng-controller="validationCtrl">
+    <div class="panel-heading border">
+      <h1>Here is my AnimeList with genres and with my personal rating
+      </h1>
+    </div>
+    <div class="panel-body">
+      <table class="table table-bordered bordered table-striped table-condensed datatable" ui-jq="dataTable" ui-options="dataTableOpt">
+        <thead>
+          <tr class="bg-primary">
+            <th>#</th>
+            <th>Anime</th>
+            <th>Genre</th>
+            <th>Rating</th>
+            <th>Ep</th>
+            <th>Status</th>
+            <th>category</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="n in data">
+            <td>{{$index+1}}</td>
+            <td>{{n[0]}}</td>
+            <td>{{n[1]}}</td>
+            <td>{{n[2]}}</td>
+            <td>{{n[3]}}</td>
+            <td>{{n[4]}}</td>
+            <td>{{n[5]}}</td>
+          </tr>
+        </tbody>
+      </table>
+      <p>Inspired By Animelist
+
+         <href='https://cdn.datatables.net/1.10.12/css/dataTables.bootstrap.min.css'></href>
+      </p>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.0/ui-bootstrap-tpls.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.12/js/jquery.dataTables.min.js'></script>
+<script src='https://cdn.datatables.net/1.10.12/js/dataTables.bootstrap.min.js'></script><script  src="/MAL_R/myanimelist.js"></script>
+
+</body>
+</html>
